@@ -1,0 +1,76 @@
+{
+  "storeLocationsAPI": [
+    {
+      "id": 1,
+      "name": "Texas"
+    },
+    { "id": 2,
+      "name": "Floria"
+    },
+    {
+      "id": 3,
+      "name": "North Carolina"
+    },
+    {
+      "id": 4,
+      "name": "Georgia"
+    }
+  ],
+  "employeeNamesAPI": [
+    {
+      "id": 1,
+      "name": "Jay"
+    },
+    { "id": 2,
+      "name": "Alex"
+    },
+    {
+      "id": 3,
+      "name": "Leo"
+    },
+    {
+       "id": 4,
+       "name": "Ernie" }
+  ],
+
+  "candyTypesAPI": [
+    {
+      "id": 1,
+      "name": "Chocolate"
+    },
+    {
+      "id": 2,
+      "name": "Chewy"
+    },
+    {
+      "id": 3,
+      "name": "Vegetable"
+    },
+    {
+      "id": 4,
+      "name": "Sugar Free" }
+  ],
+
+  "individualCandiesAPI": [
+    {
+      "id": 1,
+      "name": "KitKat",
+      "candyTypeId": 1
+    },
+    {
+      "id": 2,
+      "name": "Jolly Rancher",
+      "candyTypeId": 4
+    },
+    {
+      "id": 3,
+      "name": "Skittles",
+      "candyTypeId": 2
+    },
+    {
+      "id": 4,
+      "name": "Sour Patch",
+      "candyTypeId": 2
+    }
+  ]
+}
