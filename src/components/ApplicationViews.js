@@ -31,7 +31,18 @@ export default class ApplicationViews extends Component {
         .then(() => this.setState(newState))
 }
 
-
+deleteCandies = id => {
+    return fetch(`http://localhost:5003/individualCandiesAPI/${id}`, {
+        method: "DELETE"
+    })
+    .then(e => e.json())
+    .then(() => fetch(`http://localhost:5003/individualCandiesAPI`))
+    .then(e => e.json())
+    .then(candies => this.setState({
+        candies: candies
+    })
+  )
+}
 
   render() {
     return (
@@ -40,7 +51,7 @@ export default class ApplicationViews extends Component {
             return <StoreList stores={this.state.storeloc} />;
           }}/>
         <Route path="/candies" render={props => {
-            return <CandyList candies={this.state.candies} candyTypes={this.state.candyTypes}/>;
+            return <CandyList candies={this.state.candies} candyTypes={this.state.candyTypes} deleteCandies={this.deleteCandies}/>;
           }}/>
         <Route path="/employees" render={props => {
             return <EmployeeList employees={this.state.employees} />;
